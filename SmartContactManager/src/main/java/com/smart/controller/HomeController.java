@@ -15,21 +15,28 @@ import com.smart.entities.User;
 @Controller
 public class HomeController {
 
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String home(Model m) {
 
 		m.addAttribute("title", "Home - Smart Contact Manager");
 
 		return "home";
 	}
-	
-	
+
 	@RequestMapping("/about")
 	public String about(Model m) {
 
 		m.addAttribute("title", "About - Smart Contact Manager");
 
 		return "about";
+	}
+
+	@RequestMapping("/signup")
+	public String signup(Model m) {
+
+		m.addAttribute("title", "Register - Smart Contact Manager");
+
+		return "signup";
 	}
 
 }
