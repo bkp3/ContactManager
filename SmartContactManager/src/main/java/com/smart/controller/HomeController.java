@@ -40,6 +40,7 @@ public class HomeController {
 		return "about";
 	}
 
+	// handle for signup page
 	@RequestMapping("/signup")
 	public String signup(Model m) {
 
