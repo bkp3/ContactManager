@@ -1,0 +1,7 @@
+1 :-	3 Steps for Role Based Authorization Spring Security (login using Spring Security)
+		i.		provide the implementation of UserDetails  <-  CustomUserDetail
+		ii.		provide the implementations of UserDetailService  <-  UserDetailServiceImpl
+		iii.	write security configuration class with all configuration. A simple class the extends WebSecurityConfigureAdapter
+		
+2 :-	 
+		
