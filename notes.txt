@@ -3,5 +3,9 @@
 		ii.		provide the implementations of UserDetailService  <-  UserDetailServiceImpl
 		iii.	write security configuration class with all configuration. A simple class the extends WebSecurityConfigureAdapter
 		
-2 :-	 
+2 :-	 Several methods that we can use to configure the behaviour of the form login.
+		i.   loginPage() - the custom login page.
+		ii.  loginProcessingUrl() - the url to submit the username and password.
+		iii. defaultSuccessUrl() - the landing page after a successful login.
+		iv.  failureUrl() - the landing page after an unsuccessful login.
 		
