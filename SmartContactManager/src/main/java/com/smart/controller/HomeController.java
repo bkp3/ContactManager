@@ -23,7 +23,7 @@ import com.smart.helper.Message;
 
 @Controller
 public class HomeController {
-	
+
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 
@@ -93,6 +93,14 @@ public class HomeController {
 			return "signup";
 		}
 
+	}
+
+	// handler for custom login
+	@GetMapping("/signin")
+	public String customLogin(Model model) {
+		model.addAttribute("title", "Login - Smart Contact Manager");
+
+		return "login";
 	}
 
 }
