@@ -25,6 +25,9 @@ public class UserController {
 		// get the user by username
 		User user = this.userRepository.getUserByUserName(username);
 		System.out.println(user);
+
+		model.addAttribute("user", user);
+
 		return "normal/user_dashboard";
 	}
 
