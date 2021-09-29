@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.security.Principal;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
 
@@ -86,6 +87,7 @@ public class UserController {
 			if (file.isEmpty()) {
 				// if the file is empty, then try our message
 				System.out.println("file is empty");
+				contact.setImage("default.png");
 			} else {
 				// upload the file to the folder and update the name to the contact
 				contact.setImage(file.getOriginalFilename());
@@ -141,6 +143,20 @@ public class UserController {
 		model.addAttribute("totalPages", contacts.getTotalPages());
 
 		return "normal/show_contacts";
+	}
+
+	// showing particular contact details
+	@GetMapping("/{cId}/contact")
+	public String showContactDetails(@PathVariable("cId") Integer cId, Model model) {
+		model.addAttribute("title", "Contact Detail | Smart Contact Manager");
+
+		System.out.println("cid:- " + cId);
+
+		Optional<Contact> contactOptional = this.contactRepository.findById(cId);
+		Contact contact = contactOptional.get();
+
+		model.addAttribute("contact", contact);
+		return "normal/contact_detail";
 	}
 
 }
