@@ -62,7 +62,10 @@
 						<a href="#" th:onclick="|deleteContact(${contact.cId})|"
 							class="btn btn-danger">Delete</a>
 
-						<button class="btn btn-primary">Update</button>
+						<form method="POST"
+							th:action="'/user/update-contact/'+${contact.cId}" class="mt-2">
+							<button class="btn btn-primary">Update</button>
+						</form>
 					</div>
 
 				</div>
