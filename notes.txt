@@ -9,3 +9,12 @@
 		iii. defaultSuccessUrl() - the landing page after a successful login.
 		iv.  failureUrl() - the landing page after an unsuccessful login.
 		
+3 :-	JWT (Java Web Token):-
+		i.		JWT used to authenticate users.
+		ii.		JWT gains popularity because of token not cookies and no session.
+		iii.	When request first times comes to server, then server validates the token and if the validation request fails the request is rejected.
+		steps:-	
+			i>  	check the JWT is well formed or not.
+			ii> 	check signature
+			iii>	validate the standard claims
+			iv>		check the client permsission
