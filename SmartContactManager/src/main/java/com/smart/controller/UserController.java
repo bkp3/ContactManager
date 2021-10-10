@@ -244,12 +244,20 @@ public class UserController {
 		System.out.println("Contact:- " + contact.getName());
 		return "redirect:/user/" + contact.getcId() + "/contact";
 	}
-	
-	//your profile handler
+
+	// your profile handler
 	@GetMapping("profile-page")
 	public String yourProfile(Model model) {
 		model.addAttribute("title", "Profile Page");
 		return "normal/profile";
+	}
+
+	// open setting handler
+	@GetMapping("/settings")
+	public String openSetting(Model model) {
+		model.addAttribute("title", "Settings");
+
+		return "normal/settings";
 	}
 
 }
